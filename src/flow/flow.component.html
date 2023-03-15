@@ -1,4 +1,4 @@
-<h2>Números Aleatórios</h2>
+<!-- <h2>Números Aleatórios</h2>
 <table>
   <tr>
     <th>Numero</th>
@@ -11,4 +11,24 @@
       <span *ngIf="n % 2 != 0">IMPAR</span>
     </td>
   </tr>
-</table>
+</table> -->
+
+<h2>Gerador de Números Aleatórios</h2>
+<label for="numRandom">Digite a quantidade de números:</label>
+<input type="number" id="numRandom" name="numRandom" [(ngModel)]="numRandom">
+<button (click)="getNumbers()">Gerar</button>
+
+<div *ngIf="evenNumbers.length > 0">
+  <h3>Números pares:</h3>
+  <ul>
+    <li *ngFor="let number of evenNumbers">{{ number }}</li>
+  </ul>
+</div>
+
+<div *ngIf="oddNumbers.length > 0">
+  <h3>Números ímpares:</h3>
+  <ul>
+    <li *ngFor="let number of oddNumbers">{{ number }}</li>
+  </ul>
+</div>
+
