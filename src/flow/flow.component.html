@@ -1,0 +1,14 @@
+<h2>Números Aleatórios</h2>
+<table>
+  <tr>
+    <th>Numero</th>
+    <th>Par ou ímpar</th>
+  </tr>
+  <tr *ngFor="let n of getNumbers()">
+    <td>{{ n }}</td>
+    <td>
+      <span *ngIf="n % 2 == 0">PAR</span>
+      <span *ngIf="n % 2 != 0">IMPAR</span>
+    </td>
+  </tr>
+</table>
